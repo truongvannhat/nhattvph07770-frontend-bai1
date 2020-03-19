@@ -5,13 +5,14 @@ import { data } from './MockData';
 export class ProductService {
   products = data;
   constructor() { }
+
   getProducts(){
     return this.products;
   }
   removeProduct(id){
     return this.products.filter(product => product.id != id);
   }
-  addProduct(){
+  addProduct(product){
     const newProduct = { id: 5, ...product};
     this.products.push(newProduct);
     console.log(this.products)
