@@ -12,6 +12,8 @@ export class ProductService {
     return this.products.filter(product => product.id != id);
   }
   addProduct(){
-
+    const newProduct = { id: 5, ...product};
+    this.products.push(newProduct);
+    console.log(this.products)
   }
 }
