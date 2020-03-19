@@ -5,7 +5,6 @@ import { data } from './MockData';
 export class ProductService {
   products = data;
   constructor() { }
-
   getProducts(){
     return this.products;
   }
