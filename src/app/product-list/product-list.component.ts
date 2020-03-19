@@ -1,29 +1,47 @@
 import { Component, OnInit } from '@angular/core';
-import {Product} from "../Product"
-import { from } from 'rxjs';
+import { ProductService } from '../product.service';
+
+import { Product } from '../Product';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
+  selected: Product;
+  products: Product[];
 
-  constructor() { }
+  constructor(
+    private productService: ProductService
+  ) { 
+    console.log('constructor')
+  }
 
   ngOnInit(): void {
+    this.getProducts();
   }
-  product: Product={
-  id:1,
-  name :"item 1",
-  price: 20.87,
-  desc: "Mô tả item 1",
-  status: true,
-  img:"http://placehold.it/700x400",
-}
-  changeStatus(){
-    this.product.status= !this.product.status
+ 
+  getProducts(){
+    this.products = this.productService.getProducts();
   }
-  changeName(e){
-    this.product.name= e.target.value
+  removeItem(id){
+    this.productService.removeProduct(id);
+    // this.products = this.products.filter(product => product.id != id);
   }
-  
+
+
+
+  // changeStatus(){
+  //   // this.product.status = !this.product.status;
+  // }
+  // changeName(e){
+  //   // this.product.name = e.target.value;
+  // }
+  // removeItem(id){
+  //   this.products = this.products.filter(product => product.id != id);
+  // }
+  // showDetail(product){
+  //   console.log(product);
+  //   this.selected = product;
+  // }
 }
