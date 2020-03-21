@@ -7,15 +7,15 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Home
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" routerLink="/product-manager" routerLinkActive="active">Product Manager</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" routerLink="/add-product" routerLinkActive="active" >Add Product</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
@@ -24,7 +24,8 @@
     </div>
   </div>
 </nav>
-
+<br>
+<br>
 <!-- Page Content -->
 <div class="container">
 
@@ -38,10 +39,11 @@
     <!-- /.col-lg-3 -->
 
     <div class="col-lg-9">
-      <app-product-add></app-product-add>
+      <router-outlet></router-outlet>
+      <!-- <app-product-add></app-product-add>
       <app-slide-show></app-slide-show>
 
-      <app-product-list></app-product-list>
+      <app-product-list></app-product-list> -->
 
       <!-- /.row -->
 

@@ -1,20 +1,35 @@
-import { NgModule } from '@angular/core';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-import { CategoryComponent } from './category/category.component';
-import { ProductComponent } from './product/product.component';
-import { SlideShowComponent } from './slide-show/slide-show.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { SlideShowComponent } from './slide-show/slide-show.component';
+import { ProductComponent } from './product/product.component';
+import { CategoryComponent } from './category/category.component';
+import { FormsModule } from '@angular/forms';
 import { ProductService } from './product.service';
 import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductManagerComponent } from './product-manager/product-manager.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, CategoryComponent, ProductComponent, SlideShowComponent, ProductListComponent, ProductAddComponent ],
-  bootstrap:    [ AppComponent ],
-  providers: [ProductService]
+  declarations: [
+    AppComponent,
+    ProductListComponent,
+    SlideShowComponent,
+    ProductComponent,
+    CategoryComponent,
+    ProductAddComponent,
+    ProductManagerComponent, NotFoundComponent, ProductDetailComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+  providers: [ProductService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

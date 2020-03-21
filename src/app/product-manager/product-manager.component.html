@@ -1,0 +1,40 @@
+<!-- <div ngClass="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
+    <div class="card h-100">
+      <div class="card-body">
+        <h4 class="card-title">
+          <a href="#">{{product.name}}</a>
+        </h4>
+        <h5>${{product.price}}</h5>
+        <p class="card-text">{{product.desc}}</p>
+        <p class="card-text">{{product.status ? 'In stock': 'Out stock'}}</p>
+      </div>
+      <div class="card-footer">
+          <button class="btn btn-primary" (click)="removeItem(product.id)">Delete</button>
+          <button class="btn btn-primary" (click)="showDetail(product)">Click me!</button> -->
+          <!-- <input type="text" name="" id="" (keyup)="changeName($event)" class="form-control mt-3"> -->
+          <!-- <input type="text" name="" id="" [(ngModel)]="product.name" class="form-control mt-3">
+      </div>
+    </div>
+  </div> -->
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Desc</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <th scope="row">{{product.id}}</th>
+      <td>{{product.name}}</td>
+      <td>${{product.price}}</td>
+      <td>{{product.desc}}</td>
+      <td><button class="btn btn-primary" >Edit</button></td>
+      <td><button class="btn btn-primary" (click)="removeItem(product.id)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
