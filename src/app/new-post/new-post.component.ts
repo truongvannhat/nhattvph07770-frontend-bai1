@@ -10,7 +10,7 @@ import { NewPost } from '../NewPost';
 })
 export class NewPostComponent implements OnInit {
   selected: NewPost;
-  newPost: NewPost[];
+  newPosts: NewPost[];
 
   constructor(
     private newPostService: NewPostService
@@ -22,9 +22,9 @@ export class NewPostComponent implements OnInit {
     this.getNewPosts();
   }
   getNewPosts(){
-   this.newPostService.getNewPosts().subscribe(data => {
-     console.log(data);
-    });
+   this.newPostService.getNewPosts().subscribe(data =>
+     this.newPosts = data
+    );
   }
 
 }
