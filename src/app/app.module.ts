@@ -15,6 +15,7 @@ import { ProductManagerComponent } from './product-manager/product-manager.compo
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { NewPostService } from './new-post.service';
 import { NewPostComponent } from './new-post/new-post.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NewPostComponent } from './new-post/new-post.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ProductService, NewPostService],
   bootstrap: [AppComponent]

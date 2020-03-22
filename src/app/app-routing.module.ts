@@ -6,6 +6,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { NewPostComponent } from './new-post/new-post.component';
 
 
 
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path:'product/:id',
     component: ProductDetailComponent,
+  },
+  {
+    path:'new',
+    component: NewPostComponent,
   },
   {
     path:'**',
