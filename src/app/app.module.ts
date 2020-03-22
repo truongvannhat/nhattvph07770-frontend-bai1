@@ -13,6 +13,8 @@ import { ProductService } from './product.service';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductManagerComponent } from './product-manager/product-manager.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { NewPostService } from './new-post.service';
+import { NewPostComponent } from './new-post/new-post.component';
 
 @NgModule({
   declarations: [
@@ -22,14 +24,14 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductComponent,
     CategoryComponent,
     ProductAddComponent,
-    ProductManagerComponent, NotFoundComponent, ProductDetailComponent,
+    ProductManagerComponent, NotFoundComponent, ProductDetailComponent, NewPostComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [ProductService],
+  providers: [ProductService, NewPostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
