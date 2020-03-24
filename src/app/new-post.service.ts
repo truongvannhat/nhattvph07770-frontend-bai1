@@ -15,4 +15,7 @@ export class NewPostService {
   getNewPosts(): Observable<NewPost[]>{
     return this.http.get<NewPost[]>(this.api);
   }
+  getNewPost(id){
+    return this.http.get<NewPost[]>(`${this.api}/${id}`);
+  }
 }

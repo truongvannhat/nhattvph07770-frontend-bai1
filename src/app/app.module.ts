@@ -16,6 +16,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { NewPostService } from './new-post.service';
 import { NewPostComponent } from './new-post/new-post.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NewPostDetailComponent } from './new-post-detail/new-post-detail.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProductComponent,
     CategoryComponent,
     ProductAddComponent,
-    ProductManagerComponent, NotFoundComponent, ProductDetailComponent, NewPostComponent,
+    ProductManagerComponent, NotFoundComponent, ProductDetailComponent, NewPostComponent, NewPostDetailComponent, ProductEditComponent,
   ],
   imports: [
     BrowserModule,

@@ -22,11 +22,14 @@ export class ProductListComponent implements OnInit {
   }
  
   getProducts(){
-    this.products = this.productService.getProducts();
+   this.productService.getProducts().subscribe(data => {
+     console.log(data);
+     this.products = data;
+    });
   }
   removeItem(id){
-    // this.productService.removeProduct(id);
-    this.products = this.products.filter(product => product.id != id);
+    this.products = this.productService.removeProduct(id);
+    // this.products = this.products.filter(product => product.id != id);
   }
 
 
@@ -40,8 +43,8 @@ export class ProductListComponent implements OnInit {
   // removeItem(id){
   //   this.products = this.products.filter(product => product.id != id);
   // }
-  showDetail(product){
-    console.log(product);
-    this.selected = product;
-  }
+  // showDetail(product){
+  //   console.log(product);
+  //   this.selected = product;
+  // }
 }
