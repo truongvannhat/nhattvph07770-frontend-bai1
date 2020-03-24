@@ -7,6 +7,7 @@ import { SlideShowComponent } from './slide-show/slide-show.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { NewPostComponent } from './new-post/new-post.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 
 
@@ -36,6 +37,13 @@ const routes: Routes = [
   {
     path:'new',
     component: NewPostComponent,
+  },
+  {
+    path: 'product/:productID', 
+    component: ProductDetailComponent},
+  {
+    path: 'product/edit/:productID', 
+    component: ProductEditComponent
   },
   {
     path:'**',
