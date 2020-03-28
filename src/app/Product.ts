@@ -5,4 +5,4 @@ export class Product{
     status: boolean;
     price: number;
     img:String;
-}
+} 
